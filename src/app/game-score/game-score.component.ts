@@ -9,7 +9,6 @@ import { Router } from '@angular/router';
 })
 export class GameScoreComponent implements OnInit {
 
-  errMsg ="";
   gameCompletionMsg="";
   board= {};
   playerName:string="";
@@ -43,7 +42,7 @@ export class GameScoreComponent implements OnInit {
         this.playerName =  this.nextPlayer=="1"? 'Player1':'Player2';
         this.board= res.score;
         this.gameStatus = res.gameStatus;
-          if(this.gameStatus!="In Progress") {
+          if(this.gameStatus!="IN_PROGRESS") {
             this.gameCompletionMsg = this.gameStatus;
             this.nextPlayer = "";
           }
