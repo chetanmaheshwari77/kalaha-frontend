@@ -5,8 +5,13 @@
             <button type="button" class="btn btn-secondary" (click)="resetGame()">Reset Game</button>
         </div>  
         <div *ngIf="errMsg" class="alert alert-danger">
-          <strong *ngIf="gameStatus!='IN_PROGRESS'">{{gameCompletionMsg}}</strong>
-        </div>	
+          <strong>{{errMsg}}</strong>
+        </div>
+        <div class="alert alert-info">
+          <strong>{{gameStatus}}</strong>
+         
+        </div>
+        
       </div>		
       <div>
         <div class="playerType" *ngIf="gameStatus=='IN_PROGRESS'">Now
